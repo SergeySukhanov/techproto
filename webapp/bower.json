@@ -1,12 +1,12 @@
 {
-  "name": "artshop",
-  "description": "ArtShop - platform for community of photograph",
+  "name": "rusTech",
+  "description": "",
   "main": "gulpfile.js",
   "authors": [
     "Sergey Sukhanov"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/SergeySukhanov/artShop",
+  "homepage": "https://github.com/SergeySukhanov/techproto",
   "moduleType": [],
   "ignore": [
     "**/.*",
