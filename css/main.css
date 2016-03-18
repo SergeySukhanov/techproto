@@ -1,0 +1,166 @@
+body{
+    overflow:hidden;
+}
+
+#wrapper{
+    min-height:100%;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 7px;
+}
+
+#aside{
+    padding-left: 0;
+    height: 100%;
+    overflow:scroll;
+    padding-right:0;
+}
+
+#main-section{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+nav.main-menu {
+    background: #3C3C3C;
+    min-height: 100%;
+}
+
+nav.main-menu a {
+    display: block;
+    text-align: left;
+    color: #ffffff;
+    padding: 25px 25px;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+nav.main-menu a.active {
+    background: #0E5C7B;
+    color: #FFFFFF;
+    font-weight: 900;
+}
+
+nav.main-menu a:hover {
+    color: #FFFFFF;
+    background: #0E5C7B;
+}
+
+.info-state{
+ color: #0E5C7B
+}
+
+.info-state h5{
+    text-align: center;
+    font-weight: 900;
+    font-size: 23px;
+}
+
+.info-state b{
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: 200;
+    display: block;
+}
+
+.info-state span{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.top-info-state {
+    background-color: #EAEAEA;
+    border-bottom: 10px solid #0E5C7B;
+}
+
+.info-state {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.small-12.date-resource b {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.small-12.time-resource b {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.default-button{
+    background: #0E5C7B;
+    color: #ffffff;
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    height: 117px;
+}
+
+.default-button:hover, .default-subbutton:hover{
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.default-subbutton{
+     background: #0E5C7B;
+     color: #ffffff;
+     display: block;
+     text-align: center;
+     font-size: 25px;
+     padding: 15px;
+     font-weight: 700;
+    height: 85px;
+ }
+
+.default-subbutton.ready{
+    background: #117D47;
+}
+
+.default-subbutton.not-ready{
+    background: #8E3C00;
+}
+
+.default-subbutton.bad-ready{
+    background: #9E8607;
+}
+
+a.default-subbutton span {
+    font-size: 12px;
+    display: block;
+}
+
+.list-services{
+    overflow: scroll;
+}
+
+.item-service h6{
+    font-size: 22px;
+    position: relative;
+    top: 24px;
+}
+
+.item-service{
+    border-bottom: 1px solid #0E5C7B;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.time-fall{
+    padding-bottom: 15px;
+    font-size: 21px;
+}
+
+.time-fall span{
+    font-size: 26px;
+    margin-left: 20px;
+}

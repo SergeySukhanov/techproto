@@ -1,0 +1,19 @@
+{
+  "name": "artshop",
+  "version": "0.0.1",
+  "description": "ArtShop - platform for community of photograph",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SergeySukhanov/artShop.git"
+  },
+  "author": "Sergey Sukhanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeySukhanov/artShop/issues"
+  },
+  "homepage": "https://github.com/SergeySukhanov/artShop"
+}
