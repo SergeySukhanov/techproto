@@ -1,13 +1,13 @@
 /**
  *
  * @author SNSukhanov <sergey.n.sukhanov@firstlinesoftware.com>
- * @version 03/18/2016
+ * @version 03/19/2016
  * @see
  *
  * © 2016 All Rights Reserved
  */
 
-$(document).ready(function(){
-    new Router();
-    Backbone.history.start();
+
+var ItemScheme = Ractive.extend({
+
 });
