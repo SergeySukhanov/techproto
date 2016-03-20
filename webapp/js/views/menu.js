@@ -8,5 +8,5 @@
  */
 
 var Menu = Ractive.extend({
-
+    el:"#wrapper"
 });

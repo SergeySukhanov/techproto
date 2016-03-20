@@ -8,5 +8,5 @@
  */
 
 var StatesCollection = Backbone.Collection.extend({
-    model:state
+    model:StateModel
 });

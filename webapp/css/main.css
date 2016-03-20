@@ -106,6 +106,22 @@ nav.main-menu a:hover {
     height: 117px;
 }
 
+.default-button.button-default{
+    background: #0E5C7B;
+}
+
+.default-button.button-error{
+    background: #8E3C00;
+}
+
+.default-button.button-warning{
+    background: #9E8607;
+}
+
+.default-button.button-complete{
+    background: #117D47;
+}
+
 .default-button:hover, .default-subbutton:hover{
     color: #FFFFFF;
     opacity: 0.8;

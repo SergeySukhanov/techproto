@@ -13,7 +13,8 @@ var Router = Backbone.Router.extend({
         "":"menu",
         "service":"service",
         "services":"services",
-        "route":"route",
+        "routeList":"routeList",
+        "routeItem":"routeItem",
         "routeScheme":"routeScheme",
         "itemScheme":"itemScheme"
     },
@@ -21,9 +22,9 @@ var Router = Backbone.Router.extend({
     menu:function(){
         tools.loadTemplate("menu", function(tmpl){
             new Menu({
-                el:tmpl,
+                template:tmpl,
                 data:{
-                    config:config
+                    config:Config
                 }
             });
         });
@@ -32,9 +33,10 @@ var Router = Backbone.Router.extend({
     service:function(){
         tools.loadTemplate("service", function(tmpl){
             new Menu({
-                el:tmpl,
+                template:tmpl,
                 data:{
-                    config:config,
+                    config:Config,
+                    states:new StateModel(),
                     service: new ServiceModel()
                 }
             });
@@ -42,18 +44,24 @@ var Router = Backbone.Router.extend({
     },
 
     services:function(){
-        tools.loadTemplate("service", function(tmpl){
-            new Menu({
-                el:tmpl,
+        tools.loadTemplate("services", function(tmpl){
+            new Services({
+                template:tmpl,
                 data:{
-                    config:config,
-                    service: new ServicesCollection()
+                    config:Config,
+                    states: new StatesCollection(statesData),
+                    services: new ServicesCollection(servicesData),
+                    currentDetails:new StateModel(statesData[0].details)
                 }
             });
         });
     },
 
-    route:function(){
+    routeList:function(){
+
+    },
+
+    routeItem:function(){
 
     },
 

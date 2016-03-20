@@ -9,9 +9,7 @@
 
 var ServiceModel = Backbone.Model.extend({
     defaults:{
-        id:function(){
-            return "Service-" + (Math.random() + Math.random()) * 10000;
-        },
+        id:"Service",
         title:"Название сервиса",
         types:[
             {

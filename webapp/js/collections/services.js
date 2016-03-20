@@ -8,5 +8,7 @@
  */
 
 var ServicesCollection = Backbone.Collection.extend({
-    model:service
+    adaptors:["Backbone"],
+    magic:true,
+    model:ServiceModel
 });

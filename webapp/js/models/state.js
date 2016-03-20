@@ -9,9 +9,7 @@
 
 var StateModel = Backbone.Model.extend({
     defaults:{
-        id:function(){
-            return "State-" + (Math.random() + Math.random()) * 10000;
-        },
+        id:"State-1",
         title:"Название этапа",
         number:null,
         details:{
