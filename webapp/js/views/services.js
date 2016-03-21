@@ -13,11 +13,14 @@ var Services = Ractive.extend({
     magic:true,
     complete:function(){
         var ins = this;
-
+        var triggers = ins.get("currentDetails.process.triggers");
+        tools.resize();
         ins.on({
             details:function(event){
                 console.log(event);
                 var details = event.context.details;
+                    triggers = details.process.triggers;
+
                 ins.set("currentDetails", details);
             },
 
@@ -28,6 +31,13 @@ var Services = Ractive.extend({
                 var services = ins.get("services");
                 var date = dateObj.getDate() + "/" + dateObj.getMonth() + "/" + dateObj.getFullYear();
                 var time = dateObj.getHours() + ":" + dateObj.getMinutes() + ":" + dateObj.getSeconds();
+                var currentService = services.models[event.node.attributes['data-id'].value];
+
+                var types = services.models[event.node.attributes['data-id'].value].get("types");
+
+                types.forEach(function(elem, index){
+                    elem.time = null;
+                });
 
                 event.context.time = time;
 
@@ -38,8 +48,24 @@ var Services = Ractive.extend({
                     })();
                         break;
                     case "triggerType":(function(){
-                        if(event.context.type !== "default"){
+                        switch(event.context.type){
+                            case "default":(function(){
 
+                            })();
+                                break;
+                            case "error":(function(){
+                                tools.clock("error", ins);
+
+                            })();
+                                break;
+                            case "warning":(function(){
+                                tools.clock("warning", ins);
+                            })();
+                                break;
+                            case "complete":(function(){
+                                tools.clock("warning", ins);
+                            })();
+                                break;
                         }
                     })();
                         break;

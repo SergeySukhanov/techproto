@@ -13,10 +13,10 @@
             {{#members}}
             <h5>Ответственные лица за контроль обеспецения ресурсами</h5>
             <div class="small-12">
-                <b>Оператор:<span>{{nameOperator}}</span></b>
+                <b>Оператор:<input type="text" value="{{nameOperator}}"/></b>
             </div>
             <div class="small-12">
-                <b>Старший оператор:<span>{{nameMainOperator}}</span></b>
+                <b>Старший оператор:<input type="text" value="{{nameMainOperator}}"/></b>
             </div>
             {{/members}}
         </div>
@@ -25,6 +25,7 @@
         <div class="small-12 info-state">
             <h5>Плановое время обеспечения ресурсами</h5>
             {{#planTime}}
+                {{#getResources}}
             <div class="small-12 date-resource">
                 <b>
                     <input type="text" value="{{date}}"/>
@@ -35,6 +36,7 @@
                     <input type="text" value="{{time}}"/>
                 </b>
             </div>
+                {{/getResources}}
             {{/planTime}}
         </div>
     </div>
@@ -57,9 +59,9 @@
 </div>
 <div class="small-12 clearfix top-area top-buttons-area" style="border-bottom: 10px solid #0E5C7B;">
     {{#process}}
-        {{#triggers}}
+        {{#triggers:i}}
     <div class="small-3 columns">
-        <a href="javascript:void(0);" on-click="currentTime:'triggerType'" class="default-button button-{{type}}">{{title}}</a>
+        <a href="javascript:void(0);" data-id="{{i}}" on-click="currentTime:'triggerType'" class="default-button button-{{type}}">{{title}}</a>
         <span>{{time}}</span>
     </div>
         {{/triggers}}
@@ -70,15 +72,15 @@
 </div>
 {{/currentDetails}}
 <div class="small-12 clearfix list-services">
-    {{#services}}
-    <div id="{{id}}" class="small-12 item-service clearfix">
+    {{#services:k}}
+    <div id="{{id}}" data-id="{{k}}" class="small-12 item-service clearfix">
         <div class="small-3 columns">
             <h6>{{title}}</h6>
         </div>
         <div class="small-9 columns">
-            {{#types}}
+            {{#types:j}}
             <div class="small-3 columns">
-                <a href="javascript:void(0);" on-click="currentTime:'serviceType'" class="default-subbutton {{type}}">{{title}} <span>{{time}}</span></a>
+                <a href="javascript:void(0);" data-id="{{k}}" on-click="currentTime:'serviceType'" class="default-subbutton {{type}}">{{title}} <span>{{time}}</span></a>
             </div>
             {{/types}}
         </div>

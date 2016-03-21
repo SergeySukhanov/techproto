@@ -18,6 +18,9 @@ var Config = {
     routers:{},
     textTemplates:{},
     accountToken:false,
+    intervals:{
+        first:null
+    },
 
     data: {
 

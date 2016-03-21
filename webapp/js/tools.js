@@ -50,4 +50,33 @@ var tools = {
             })
         }
     },
+
+    clock:function(type, ins){
+        if(type === "error"){
+            var data;
+            var seconds = 0;
+            var minutes = 0;
+            var hours = 0;
+            data = hours + " часов " + minutes + " минут " + seconds + " секунд";
+            ins.set("currentDetails.process.result.time", data);
+            Config.intervals.first = setInterval(function(){
+                seconds++;
+                if(seconds > 59){
+                    seconds = 0;
+                    minutes++;
+                }
+
+                if(minutes > 59){
+                    minutes = 0;
+                    hours++;
+                }
+
+                data = hours + " часов " + minutes + " минут " + seconds + " секунд";
+                ins.set("currentDetails.process.result.time", data);
+
+            }, 1000);
+        }else if(type === "warning" || type === "complete"){
+            clearInterval(Config.intervals.first);
+        }
+    }
 };
