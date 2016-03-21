@@ -7,6 +7,8 @@ var statesData = [
         id: "State-1",
         title: "Выдача со склада",
         number: 5,
+        type: "operation",
+        status: "delay",
         details: {
             addressPlace: [
                 {
@@ -84,6 +86,8 @@ var statesData = [
         id: "State-2",
         title: "Транспортировка",
         number: 15,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -160,7 +164,9 @@ var statesData = [
     {
         id: "State-3",
         title: "Контроль БТК",
+        status: "losses",
         number: 20,
+        type: "operation",
         details: {
             addressPlace: [
                 {
@@ -238,6 +244,8 @@ var statesData = [
         id: "State-4",
         title: "Транспортровка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -315,6 +323,8 @@ var statesData = [
         id: "State-5",
         title: "Заготовительная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -392,6 +402,8 @@ var statesData = [
         id: "State-6",
         title: "Транспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -469,6 +481,8 @@ var statesData = [
         id: "State-7",
         title: "Автоматная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -546,6 +560,8 @@ var statesData = [
         id: "State-8",
         title: "Транспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -623,6 +639,8 @@ var statesData = [
         id: "State-9",
         title: "Контроль БТК",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -700,6 +718,8 @@ var statesData = [
         id: "State-10",
         title: "Контроль БТК",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -777,6 +797,8 @@ var statesData = [
         id: "State-11",
         title: "Траспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -854,6 +876,8 @@ var statesData = [
         id: "State-12",
         title: "Токарно-револьверная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -931,6 +955,8 @@ var statesData = [
         id: "State-13",
         title: "Токарно-револьверная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1008,6 +1034,8 @@ var statesData = [
         id: "State-14",
         title: "Транспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1085,6 +1113,8 @@ var statesData = [
         id: "State-15",
         title: "Контроль БТК",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1162,6 +1192,8 @@ var statesData = [
         id: "State-16",
         title: "Траспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1239,6 +1271,8 @@ var statesData = [
         id: "State-17",
         title: "Токарно-револьверная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1316,6 +1350,8 @@ var statesData = [
         id: "State-18",
         title: "Токарно-револьверная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1393,6 +1429,8 @@ var statesData = [
         id: "State-19",
         title: "Токарно-револьверная",
         number: 33,
+        type: "operation",
+        status: "plan",
         details: {
             addressPlace: [
                 {
@@ -1470,6 +1508,8 @@ var statesData = [
         id: "State-20",
         title: "Траспортировка",
         number: 33,
+        type: "transportation",
+        status: "plan",
         details: {
             addressPlace: [
                 {

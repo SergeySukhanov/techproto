@@ -1,12 +1,34 @@
+body {
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
 .wrapper {
-    border: 5px solid #117d47;
-    width: 440px;
+    /*border: 5px solid #117d47;*/
+    width: 390px;
     height: 300px;
-    border-radius: 5px;
+    position: relative;
+    /*border-radius: 5px;*/
     background-color: #DDE9FF;
     background-image: url("../img/background.jpg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
+}
+
+.green {
+    border: 5px solid #117d47;
+}
+.yellow {
+    border: 5px solid #F9DA36;
+    -webkit-box-shadow: 20px 0px 0px 0px #F9DA36;
+    -moz-box-shadow: 20px 0px 0px 0px #F9DA36;
+    box-shadow: 20px 0px 0px 0px #F9DA36;
+}
+.red {
+    border: 5px solid #8E2100;
+    -webkit-box-shadow: 40px 0px 0px 0px #8E2100;
+    -moz-box-shadow: 40px 0px 0px 0px #8E2100;
+    box-shadow: 40px 0px 0px 0px #8E2100;
 
 }
 .wrapperYellow {
@@ -42,22 +64,59 @@
 .defaultCircle {
     color: #0068C1;
 }
+.defaultCircle:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    background: #0068C1;
+    padding: 5px 10px; /* Поля */
+    border-radius: 5px;
+    color: white;
+}
+.greenCircle:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    background: #117d47;
+    padding: 5px 10px; /* Поля */
+    border-radius: 5px;
+    color: white;
+}
+.yellowCircle:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    background: #F9DA36;
+    padding: 5px 10px; /* Поля */
+    border-radius: 5px;
+    color: black;
+}
+.redCircle:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    z-index: 1;
+    background: #8E2100;
+    padding: 5px 10px; /* Поля */
+    border-radius: 5px;
+    color: white;
+}
 .operationWorkPlace {
     display: inline-table;
     background-color: white;
-    outline: 5px solid #117d47;
+    border: 5px solid #117d47;
+    /*border-right: 0;*/
     padding: 20px;
     position: relative;
-    margin-top: 50px;
-    width: 120px;
-    height: 200px;
+    margin-top: 40px;
+    width: 125px;
+    height: 210px;
     text-align: center;
 }
 .operationWorkPlace::before, .operationWorkPlace::after {
     content: '';
     position: absolute;
     display: inline-table;
-    left: 125px;
+    left: 120px;
     bottom: 0px;
     border: 100px solid transparent;
     border-left: 50px solid #117d47;
@@ -65,10 +124,33 @@
 .operationWorkPlace::after {
     border-left: 50px solid white;
     display: inline-table;
-    left: 120px;
+    left: 115px;
 }
 .leftStorage {
+    left: -75px;
 }
 .rightStorage {
-    left: 279px;
+    left: 205px;
 }
+.workPlaceItem {
+    margin-top: 50px;
+    /*margin-left: 190px;*/
+    display: inline-block;
+    width: 585px;
+    position: relative;
+    left: 70px;
+}
+.transportation {
+    width: 100px;
+    height: 50px;
+    border: 5px solid #117d47;
+    display: inline-table;
+    bottom: 198px;
+    text-align: center;
+    position: relative;
+}
+.globalWrapper{
+    display: inline-table;
+    width: 10000px;
+}
+

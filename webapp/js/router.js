@@ -74,7 +74,9 @@ var Router = Backbone.Router.extend({
             new ItemScheme({
                 template: tmpl,
                 data: {
-                    config: Config
+                    config: Config,
+                    services: new ServicesCollection(servicesData),
+                    states: new StatesCollection(statesData)
                 }
             });
         });

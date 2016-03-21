@@ -1,28 +1,44 @@
-<div class="circle yellowCircle"><i class="fa fa-3x fa-exclamation-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle redCircle"><i class="fa fa-3x fa-times-circle"></i></div>
-<div class="circle redCircle"><i class="fa fa-3x fa-times-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
+<div class="globalWrapper">
+    {{#states}}
+    {{#if type == "operation"}}
+        <div class="workPlaceItem">
+            <div class="circle yellowCircle" data-title="{{services[0].title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[1].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle redCircle" data-title="{{services[2].title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+            <div class="circle redCircle" data-title="{{services[3].title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[4].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[5].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[6].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
 
-<div class="wrapper">
-    <div class="leftStorage operationWorkPlace">
-        <br>
-        Входной склад рабочего места
-    </div>
-    <div class="wrapperYellow"></div>
-    <div class="wrapperRed"></div>
-    <div class="rightStorage operationWorkPlace">
-        <br>
-        Выходной склад рабочего места
-    </div>
+            <div class="wrapper {{#if status =='plan'}}green{{/if}}
+            {{#if status =='delay'}}yellow{{/if}}
+            {{#if status =='losses'}}red{{/if}}">
+                <div class="leftStorage operationWorkPlace">
+                    <br>
+                    <br>
+                    Входной склад заготовок
+                </div>
+                <!--<div class="wrapperYellow"></div>-->
+                <!--<div class="wrapperRed"></div>-->
+                <div class="rightStorage operationWorkPlace">
+                    <br>
+                    <br>
+                    Выходной склад деталей
+                </div>
+            </div>
+
+            <div class="circle greenCircle"data-title="{{services[7].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle defaultCircle" data-title="{{services[8].title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+            <div class="circle greenCircle" data-title="{{services[9].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[10].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle yellowCircle" data-title="{{services[11].title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+            <div class="circle greenCircle" data-title="{{services[12].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            <div class="circle defaultCircle" data-title="{{services[13].title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+        </div>
+    {{/if}}
+    {{#if type == "transportation"}}
+        <div class="transportation">{{title}}</div>
+    {{/if}}
+
+    {{/states}}
 </div>
-
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle defaultCircle"><i class="fa fa-3x fa-circle-o"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle yellowCircle"><i class="fa fa-3x fa-exclamation-circle"></i></div>
-<div class="circle greenCircle"><i class="fa fa-3x fa-check-circle"></i></div>
-<div class="circle defaultCircle"><i class="fa fa-3x fa-circle-o"></i></div>
