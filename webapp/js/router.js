@@ -69,8 +69,15 @@ var Router = Backbone.Router.extend({
 
     },
 
-    itemScheme:function(){
-
+    itemScheme:function() {
+        tools.loadTemplate("itemScheme", function (tmpl) {
+            new ItemScheme({
+                template: tmpl,
+                data: {
+                    config: Config
+                }
+            });
+        });
     },
 
     initialize:function(){

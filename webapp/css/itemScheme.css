@@ -1,0 +1,74 @@
+.wrapper {
+    border: 5px solid #117d47;
+    width: 440px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #DDE9FF;
+    background-image: url("../img/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.wrapperYellow {
+    width: 40px;
+    height: 290px;
+    display: inline-table;
+    background-color: #F9DA36;
+    position: absolute;
+    left: 343px;
+}
+.wrapperRed {
+    width: 20px;
+    height: 290px;
+    display: inline-table;
+    background-color: #8E2100;
+    position: absolute;
+    left: 383px;
+}
+.circle {
+    text-align: center;
+    margin: 5px;
+    display: inline-table;
+}
+.greenCircle {
+    color: #117d47;
+}
+.yellowCircle {
+    color: #F9DA36;
+}
+.redCircle {
+    color: #8E2100;
+}
+.defaultCircle {
+    color: #0068C1;
+}
+.operationWorkPlace {
+    display: inline-table;
+    background-color: white;
+    outline: 5px solid #117d47;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+    width: 120px;
+    height: 200px;
+    text-align: center;
+}
+.operationWorkPlace::before, .operationWorkPlace::after {
+    content: '';
+    position: absolute;
+    display: inline-table;
+    left: 125px;
+    bottom: 0px;
+    border: 100px solid transparent;
+    border-left: 50px solid #117d47;
+}
+.operationWorkPlace::after {
+    border-left: 50px solid white;
+    display: inline-table;
+    left: 120px;
+}
+.leftStorage {
+}
+.rightStorage {
+    left: 279px;
+}

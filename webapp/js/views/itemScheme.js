@@ -9,5 +9,10 @@
 
 
 var ItemScheme = Ractive.extend({
-
+    el:"#wrapper",
+    adaptors:["Backbone"],
+    magic:true,
+    complete: function(){
+        console.log("itemScheme page");
+    }
 });
