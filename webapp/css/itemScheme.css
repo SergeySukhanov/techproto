@@ -102,52 +102,73 @@ body {
 }
 .operationWorkPlace {
     display: inline-table;
-    background-color: white;
-    border: 5px solid #117d47;
-    /*border-right: 0;*/
+    /* background-color: white; */
+    /* border: 5px solid #117d47; */
+    background-image: url("../img/storageYellow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border-right: 0; */
     padding: 20px;
+    padding-left: 10px;
     position: relative;
     margin-top: 40px;
-    width: 125px;
+    width: 148px;
     height: 210px;
     text-align: center;
 }
-.operationWorkPlace::before, .operationWorkPlace::after {
-    content: '';
-    position: absolute;
-    display: inline-table;
-    left: 120px;
-    bottom: 0px;
-    border: 100px solid transparent;
-    border-left: 50px solid #117d47;
-}
-.operationWorkPlace::after {
-    border-left: 50px solid white;
-    display: inline-table;
-    left: 115px;
-}
+/*.operationWorkPlace::before, .operationWorkPlace::after {*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*/!*background-image: url("../img/storage.svg");*!/*/
+    /*/!*background-size: 100% auto;*!/*/
+    /*/!*background-repeat: no-repeat;*!/*/
+    /*display: inline-table;*/
+    /*left: 120px;*/
+    /*bottom: 0px;*/
+    /*border: 100px solid transparent;*/
+    /*/!*border-left: 50px solid #117d47;*!/*/
+/*}*/
+/*.operationWorkPlace::after {*/
+    /*border-left: 50px solid white;*/
+    /*display: inline-table;*/
+    /*left: 115px;*/
+/*}*/
 .leftStorage {
-    left: -75px;
+    left: -50px;
 }
 .rightStorage {
-    left: 205px;
+    left: 180px;
 }
 .workPlaceItem {
     margin-top: 50px;
-    /*margin-left: 190px;*/
+    /* margin-left: 190px; */
     display: inline-block;
-    width: 585px;
+    width: 530px;
     position: relative;
-    left: 70px;
+    left: 45px;
 }
 .transportation {
-    width: 100px;
-    height: 50px;
-    border: 5px solid #117d47;
+    /*background-image: url("../img/arrowGreen.svg");*/
+    width: 185px;
+    height: 123px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* border: 5px solid #117d47; */
     display: inline-table;
-    bottom: 198px;
+    bottom: 248px;
     text-align: center;
     position: relative;
+}
+.arrowGreen {
+    background-image: url("../img/arrowGreen.svg");
+}
+.arrowYellow {
+    background-image: url("../img/arrowYellow.svg");
+    width: 205px;
+}
+.arrowRed {
+    background-image: url("../img/arrowRed.svg");
+    width: 215px;
 }
 .globalWrapper{
     display: inline-table;

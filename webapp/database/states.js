@@ -87,7 +87,7 @@ var statesData = [
         title: "Транспортировка",
         number: 15,
         type: "transportation",
-        status: "plan",
+        status: "delay",
         details: {
             addressPlace: [
                 {
@@ -245,7 +245,7 @@ var statesData = [
         title: "Транспортровка",
         number: 33,
         type: "transportation",
-        status: "plan",
+        status: "losses",
         details: {
             addressPlace: [
                 {
