@@ -104,7 +104,7 @@ body {
     display: inline-table;
     /* background-color: white; */
     /* border: 5px solid #117d47; */
-    background-image: url("../img/storageYellow.svg");
+    background-image: url("../img/storageGreen.svg");
     background-size: contain;
     background-repeat: no-repeat;
     /* border-right: 0; */
@@ -133,6 +133,15 @@ body {
     /*display: inline-table;*/
     /*left: 115px;*/
 /*}*/
+.storageGreen {
+    background-image: url("../img/storageGreen.svg");
+}
+.storageYellow {
+    background-image: url("../img/storageYellow.svg");
+}
+.storageRed {
+    background-image: url("../img/storageRed.svg");
+}
 .leftStorage {
     left: -50px;
 }
@@ -191,7 +200,7 @@ body {
     position: absolute;
     z-index: -30;
     top: 0px;
-    left: 385px;
+    left: 383px;
     vertical-align: bottom;
 }
 .rightTimeLineWorkPlace>p {

@@ -17,5 +17,6 @@ var ItemScheme = Ractive.extend({
     },
     complete: function(){
         console.log("itemScheme page");
+        console.log(this.get("services"));
     }
 });

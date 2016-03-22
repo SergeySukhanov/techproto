@@ -2,49 +2,124 @@
     {{#states}}
     {{#if type == "operation"}}
         <div class="workPlaceItem">
-            <div class="circle yellowCircle" data-title="{{services[0].title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[1].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle redCircle" data-title="{{services[2].title}}"><i class="fa fa-3x fa-times-circle"></i></div>
-            <div class="circle redCircle" data-title="{{services[3].title}}"><i class="fa fa-3x fa-times-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[4].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[5].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[6].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+
+            {{#services: i}}
+                {{#if i<7}}
+                    {{#if status =='plan'}}
+                        <div class="circle greenCircle" data-title="{{title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='delay'}}
+                        <div class="circle yellowCircle" data-title="{{title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='losses'}}
+                        <div class="circle redCircle" data-title="{{title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='default'}}
+                        <div class="circle defaultCircle" data-title="{{title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+                    {{/if}}
+                {{/if}}
+            {{/services}}
 
             <div class="wrapper {{#if status =='plan'}}green{{/if}}
             {{#if status =='delay'}}yellow{{/if}}
             {{#if status =='losses'}}red{{/if}}">
-                <div class="leftTimeLineWorkPlace"><p>8:30</p></div>
-                <div class="leftStorage operationWorkPlace">
-                    <br>
-                    <br>
-                    Входной склад заготовок
+                <div class="leftTimeLineWorkPlace">
+                    <p>
+                        {{#if details.planTime[0].start.time}}
+                            {{details.planTime[0].start.time}}
+                        {{else}}
+                            планового времени нет
+                        {{/if}}
+                    </p>
                 </div>
-                <!--<div class="wrapperYellow"></div>-->
-                <!--<div class="wrapperRed"></div>-->
-                <div class="rightStorage operationWorkPlace">
+                <div class="leftStorage operationWorkPlace
+                    {{#if services[7].status =='plan'}}
+                        storageGreen
+                    {{/if}}
+                    {{#if services[7].status =='delay'}}
+                        storageYellow
+                    {{/if}}
+                    {{#if services[7].status =='losses'}}
+                        storageRed
+                    {{/if}}
+                    {{#if services[7].status =='default'}}
+                        storageGreen
+                    {{/if}}
+                ">
                     <br>
                     <br>
-                    Выходной склад деталей
+                    Входной склад заготовок<br><i class="fa fa-2x fa-cogs" style="color: #b3b3b3;"></i>
                 </div>
-                <div class="rightTimeLineWorkPlace"><p>10:30</p></div>
-            </div>
 
-            <div class="circle greenCircle"data-title="{{services[7].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle defaultCircle" data-title="{{services[8].title}}"><i class="fa fa-3x fa-circle-o"></i></div>
-            <div class="circle greenCircle" data-title="{{services[9].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[10].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle yellowCircle" data-title="{{services[11].title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
-            <div class="circle greenCircle" data-title="{{services[12].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
-            <div class="circle defaultCircle" data-title="{{services[13].title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+                <div class="rightStorage operationWorkPlace
+                    {{#if services[13].status =='plan'}}
+                        storageGreen
+                    {{/if}}
+                    {{#if services[13].status =='delay'}}
+                        storageYellow
+                    {{/if}}
+                    {{#if services[13].status =='losses'}}
+                        storageRed
+                    {{/if}}
+                    {{#if services[13].status =='default'}}
+                        storageGreen
+                    {{/if}}
+                ">
+                    <br>
+                    <br>
+                    Выходной склад деталей<br><i class="fa fa-2x fa-cogs" style="color: #b3b3b3;"></i>
+                </div>
+                <div class="rightTimeLineWorkPlace">
+                    <p>
+                        {{#if details.planTime[0].finish.time}}
+                            {{details.planTime[0].finish.time}}
+                        {{else}}
+                            планового времени нет
+                        {{/if}}
+                    </p>
+                </div>
+            </div>
+            {{#services: i}}
+                {{#if i>=7}}
+                    {{#if status =='plan'}}
+                        <div class="circle greenCircle" data-title="{{title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='delay'}}
+                        <div class="circle yellowCircle" data-title="{{title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='losses'}}
+                        <div class="circle redCircle" data-title="{{title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+                    {{/if}}
+                    {{#if status =='default'}}
+                        <div class="circle defaultCircle" data-title="{{title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+                    {{/if}}
+                {{/if}}
+            {{/services}}
         </div>
     {{/if}}
     {{#if type == "transportation"}}
         <div class="transportation {{#if status =='plan'}}arrowGreen{{/if}}
             {{#if status =='delay'}}arrowYellow{{/if}}
             {{#if status =='losses'}}arrowRed{{/if}}">
-            <div class="leftTimeLineTransportation"><p>8:30</p></div>
+            <div class="leftTimeLineTransportation">
+                <p>
+                    {{#if details.planTime[0].start.time}}
+                    {{details.planTime[0].start.time}}
+                    {{else}}
+                    планового времени нет
+                    {{/if}}
+                </p>
+            </div>
             <br><br>{{title}}
-            <div class="rightTimeLineTransportation"><p>8:30</p></div>
+            <div class="rightTimeLineTransportation">
+                <p>
+                    {{#if details.planTime[0].finish.time}}
+                    {{details.planTime[0].finish.time}}
+                    {{else}}
+                    планового времени нет
+                    {{/if}}
+                </p>
+            </div>
         </div>
     {{/if}}
 
