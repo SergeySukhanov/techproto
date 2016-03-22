@@ -1,3 +1,5 @@
+<h2>Мнемосхема процесса производства</h2>
+
 <div class="globalWrapper">
     {{#states}}
     {{#if type == "operation"}}
@@ -28,7 +30,7 @@
                         {{#if details.planTime[0].start.time}}
                             {{details.planTime[0].start.time}}
                         {{else}}
-                            планового времени нет
+                            hh:mm
                         {{/if}}
                     </p>
                 </div>
@@ -74,7 +76,7 @@
                         {{#if details.planTime[0].finish.time}}
                             {{details.planTime[0].finish.time}}
                         {{else}}
-                            планового времени нет
+                            hh:mm
                         {{/if}}
                     </p>
                 </div>
@@ -106,7 +108,7 @@
                     {{#if details.planTime[0].start.time}}
                     {{details.planTime[0].start.time}}
                     {{else}}
-                    планового времени нет
+                    hh:mm
                     {{/if}}
                 </p>
             </div>
@@ -116,7 +118,7 @@
                     {{#if details.planTime[0].finish.time}}
                     {{details.planTime[0].finish.time}}
                     {{else}}
-                    планового времени нет
+                    hh:mm
                     {{/if}}
                 </p>
             </div>
