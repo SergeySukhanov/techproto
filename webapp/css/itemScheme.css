@@ -174,4 +174,67 @@ body {
     display: inline-table;
     width: 10000px;
 }
-
+.leftTimeLineWorkPlace {
+    height: 400px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    left: -5px;
+    vertical-align: bottom;
+}
+.leftTimeLineWorkPlace>p {
+    padding-top: 400px;
+}
+.rightTimeLineWorkPlace {
+    height: 400px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    top: 0px;
+    left: 385px;
+    vertical-align: bottom;
+}
+.rightTimeLineWorkPlace>p {
+    padding-top: 400px;
+}
+.leftTimeLineTransportation {
+    height: 282px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    top: 42px;
+    vertical-align: bottom;
+}
+.leftTimeLineTransportation>p {
+    padding-top: 283px;
+}
+.arrowGreen>.rightTimeLineTransportation {
+    height: 265px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    top: 61px;
+    left: 181px;
+    vertical-align: bottom;
+}
+.arrowYellow>.rightTimeLineTransportation {
+    height: 265px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    top: 61px;
+    left: 201px;
+    vertical-align: bottom;
+}
+.arrowRed>.rightTimeLineTransportation {
+    height: 265px;
+    border-left: 2px dotted #B3B3B3;
+    position: absolute;
+    z-index: -30;
+    top: 61px;
+    left: 212px;
+    vertical-align: bottom;
+}
+.rightTimeLineTransportation>p {
+    padding-top: 264px;
+}

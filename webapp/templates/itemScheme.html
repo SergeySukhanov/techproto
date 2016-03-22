@@ -13,6 +13,7 @@
             <div class="wrapper {{#if status =='plan'}}green{{/if}}
             {{#if status =='delay'}}yellow{{/if}}
             {{#if status =='losses'}}red{{/if}}">
+                <div class="leftTimeLineWorkPlace"><p>8:30</p></div>
                 <div class="leftStorage operationWorkPlace">
                     <br>
                     <br>
@@ -25,6 +26,7 @@
                     <br>
                     Выходной склад деталей
                 </div>
+                <div class="rightTimeLineWorkPlace"><p>10:30</p></div>
             </div>
 
             <div class="circle greenCircle"data-title="{{services[7].title}}"><i class="fa fa-3x fa-check-circle"></i></div>
@@ -39,7 +41,11 @@
     {{#if type == "transportation"}}
         <div class="transportation {{#if status =='plan'}}arrowGreen{{/if}}
             {{#if status =='delay'}}arrowYellow{{/if}}
-            {{#if status =='losses'}}arrowRed{{/if}}"><br><br>{{title}}</div>
+            {{#if status =='losses'}}arrowRed{{/if}}">
+            <div class="leftTimeLineTransportation"><p>8:30</p></div>
+            <br><br>{{title}}
+            <div class="rightTimeLineTransportation"><p>8:30</p></div>
+        </div>
     {{/if}}
 
     {{/states}}
