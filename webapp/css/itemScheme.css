@@ -5,7 +5,9 @@ body {
 .globalWrapper{
     display: inline-table;
     width: 10000px;
+    margin-top: 70px;
     overflow-x: scroll;
+    margin-left: 30px;
 }
 .wrapper {
     /*border: 5px solid #117d47;*/
@@ -249,4 +251,24 @@ body {
 }
 .rightTimeLineTransportation>p {
     padding-top: 264px;
+}
+.titleForWorkPlace {
+    position: absolute;
+    background: white;
+    padding: 5px;
+    margin: 0px;
+}
+.titleForWorkPlace>h5 {
+    margin: 0px;
+}
+.description {
+    display: inline-block;
+    position: relative;
+    left: 600px;
+    top: -360px;
+}
+.title {
+    position: fixed;
+    padding-left: 30px;
+    padding-top: 10px;
 }

@@ -1,0 +1,111 @@
+{{#state}}
+
+<div class="row">
+    <div class="small-5 small-centered small-text-center">
+        <h2 style="text-align: center">{{title}}</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="small-5">
+        <div class="workPlaceItem">
+
+            {{#services: i}}
+            {{#if i<7}}
+            {{#if status =='plan'}}
+            <div class="circle greenCircle" data-title="{{title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            {{/if}}
+            {{#if status =='delay'}}
+            <div class="circle yellowCircle" data-title="{{title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+            {{/if}}
+            {{#if status =='losses'}}
+            <div class="circle redCircle" data-title="{{title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+            {{/if}}
+            {{#if status =='default'}}
+            <div class="circle defaultCircle" data-title="{{title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+            {{/if}}
+            {{/if}}
+            {{/services}}
+
+            <div class="wrapper {{#if status =='plan'}}green{{/if}}
+                        {{#if status =='delay'}}yellow{{/if}}
+                        {{#if status =='losses'}}red{{/if}}">
+                <div class="leftTimeLineWorkPlace">
+                    <p>
+                        {{#if details.planTime[0].start.time}}
+                        {{details.planTime[0].start.time}}
+                        {{else}}
+                        hh:mm
+                        {{/if}}
+                    </p>
+                </div>
+                <div class="leftStorage operationWorkPlace
+                            {{#if services[7].status =='plan'}}
+                                storageGreen
+                            {{/if}}
+                            {{#if services[7].status =='delay'}}
+                                storageYellow
+                            {{/if}}
+                            {{#if services[7].status =='losses'}}
+                                storageRed
+                            {{/if}}
+                            {{#if services[7].status =='default'}}
+                                storageGreen
+                            {{/if}}
+                        ">
+                    <br>
+                    <br>
+                    Входной склад заготовок<br><i class="fa fa-2x fa-cogs" style="color: #b3b3b3;"></i>
+                </div>
+
+                <div class="rightStorage operationWorkPlace
+                            {{#if services[13].status =='plan'}}
+                                storageGreen
+                            {{/if}}
+                            {{#if services[13].status =='delay'}}
+                                storageYellow
+                            {{/if}}
+                            {{#if services[13].status =='losses'}}
+                                storageRed
+                            {{/if}}
+                            {{#if services[13].status =='default'}}
+                                storageGreen
+                            {{/if}}
+                        ">
+                    <br>
+                    <br>
+                    Выходной склад деталей<br><i class="fa fa-2x fa-cogs" style="color: #b3b3b3;"></i>
+                </div>
+                <div class="rightTimeLineWorkPlace">
+                    <p>
+                        {{#if details.planTime[0].finish.time}}
+                        {{details.planTime[0].finish.time}}
+                        {{else}}
+                        hh:mm
+                        {{/if}}
+                    </p>
+                </div>
+            </div>
+            {{#services: i}}
+            {{#if i>=7}}
+            {{#if status =='plan'}}
+            <div class="circle greenCircle" data-title="{{title}}"><i class="fa fa-3x fa-check-circle"></i></div>
+            {{/if}}
+            {{#if status =='delay'}}
+            <div class="circle yellowCircle" data-title="{{title}}"><i class="fa fa-3x fa-exclamation-circle"></i></div>
+            {{/if}}
+            {{#if status =='losses'}}
+            <div class="circle redCircle" data-title="{{title}}"><i class="fa fa-3x fa-times-circle"></i></div>
+            {{/if}}
+            {{#if status =='default'}}
+            <div class="circle defaultCircle" data-title="{{title}}"><i class="fa fa-3x fa-circle-o"></i></div>
+            {{/if}}
+            {{/if}}
+            {{/services}}
+        </div>
+        <div class="description">
+            Оператор: <b>{{details.members[0].nameOperator}}</b> <br>
+            Старший оператор: <b>{{details.members[0].nameMainOperator}}</b>
+        </div>
+    </div>
+</div>
+{{/state}}

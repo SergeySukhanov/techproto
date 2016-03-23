@@ -16,7 +16,8 @@ var Router = Backbone.Router.extend({
         "routeList":"routeList",
         "routeItem":"routeItem",
         "routeScheme":"routeScheme",
-        "itemScheme":"itemScheme"
+        "itemScheme":"itemScheme",
+        "currentItem/:id": "currentItem"
     },
 
     menu:function(){
@@ -79,6 +80,19 @@ var Router = Backbone.Router.extend({
                     states: new StatesCollection(statesData)
                 }
             });
+        });
+    },
+    currentItem: function(id){
+        console.log(id);
+        tools.loadTemplate("currentItem", function(tmpl) {
+           new CurrentItem({
+               template: tmpl,
+               data: {
+                   config: Config,
+                   state: new StateModel(statesData[id]),
+                   services: new ServicesCollection(servicesData)
+               }
+           });
         });
     },
 

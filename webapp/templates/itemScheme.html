@@ -1,7 +1,7 @@
-<h2>Мнемосхема процесса производства</h2>
+<h2 class="title">Мнемосхема процесса производства</h2>
 
 <div class="globalWrapper">
-    {{#states}}
+    {{#states: id}}
     {{#if type == "operation"}}
         <div class="workPlaceItem">
 
@@ -23,8 +23,9 @@
             {{/services}}
 
             <div class="wrapper {{#if status =='plan'}}green{{/if}}
-            {{#if status =='delay'}}yellow{{/if}}
-            {{#if status =='losses'}}red{{/if}}">
+                {{#if status =='delay'}}yellow{{/if}}
+                {{#if status =='losses'}}red{{/if}}">
+                <a href="#currentItem/{{id}}"  class="titleForWorkPlace"><h5>{{title}}</h5></a>
                 <div class="leftTimeLineWorkPlace">
                     <p>
                         {{#if details.planTime[0].start.time}}
