@@ -53,7 +53,17 @@
                     <br>
                     Входной склад заготовок<br><i class="fa fa-2x fa-cogs" style="color: #b3b3b3;"></i>
                 </div>
-
+                <div class="defect
+                    {{#if services[11].status =='plan'}}
+                        defectGreen
+                    {{/if}}
+                    {{#if services[11].status =='delay'}}
+                        defectYellow
+                    {{/if}}
+                    {{#if services[11].status =='losses'}}
+                        defectRed
+                    {{/if}}
+                ">Брак:<h3>0</h3></div>
                 <div class="rightStorage operationWorkPlace
                     {{#if services[13].status =='plan'}}
                         storageGreen

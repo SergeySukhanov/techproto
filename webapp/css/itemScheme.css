@@ -69,13 +69,13 @@ body {
     color: #8E2100;
 }
 .defaultCircle {
-    color: #0068C1;
+    color: #0E5C7B;
 }
 .defaultCircle:hover::after {
     content: attr(data-title);
     position: absolute;
     z-index: 1;
-    background: #0068C1;
+    background: #0E5C7B;
     padding: 5px 10px; /* Поля */
     border-radius: 5px;
     color: white;
@@ -281,4 +281,24 @@ body {
     left: 400px;
     top: 130px;
 
+}
+.defect {
+    text-align: center;
+    padding-top: 10px;
+    width: 69px;
+    height: 90px;
+    left: 213px;
+    bottom: -14px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.defectGreen {
+    background-image: url("../img/defectGreen.svg");
+}
+.defectYellow {
+    background-image: url("../img/defectYellow.svg");
+}
+.defectRed {
+    background-image: url("../img/defectRed.svg");
 }

@@ -313,7 +313,7 @@ var servicesData = [
     },
     {
         id:"Service-12",
-        title:"Технолог",
+        title:"Брак",
         status: "plan",
         types:[
             {
