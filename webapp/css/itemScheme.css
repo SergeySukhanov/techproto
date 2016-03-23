@@ -272,3 +272,13 @@ body {
     padding-left: 30px;
     padding-top: 10px;
 }
+.transportationCurrentItem {
+    top: 90px;
+}
+.descriptionTransportation {
+    display: inline-block;
+    position: relative;
+    left: 400px;
+    top: 130px;
+
+}

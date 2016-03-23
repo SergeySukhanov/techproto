@@ -7,6 +7,7 @@
 </div>
 <div class="row">
     <div class="small-5">
+        {{#if type == "operation"}}
         <div class="workPlaceItem">
 
             {{#services: i}}
@@ -106,6 +107,37 @@
             Оператор: <b>{{details.members[0].nameOperator}}</b> <br>
             Старший оператор: <b>{{details.members[0].nameMainOperator}}</b>
         </div>
+        {{/if}}
+        {{#if type == "transportation"}}
+
+        <div class="transportation transportationCurrentItem {{#if status =='plan'}}arrowGreen{{/if}}
+            {{#if status =='delay'}}arrowYellow{{/if}}
+            {{#if status =='losses'}}arrowRed{{/if}}">
+            <div class="leftTimeLineTransportation">
+                <p>
+                    {{#if details.planTime[0].start.time}}
+                    {{details.planTime[0].start.time}}
+                    {{else}}
+                    hh:mm
+                    {{/if}}
+                </p>
+            </div>
+            <br><br>{{title}}
+            <div class="rightTimeLineTransportation">
+                <p>
+                    {{#if details.planTime[0].finish.time}}
+                    {{details.planTime[0].finish.time}}
+                    {{else}}
+                    hh:mm
+                    {{/if}}
+                </p>
+            </div>
+        </div>
+        <div class="descriptionTransportation">
+            Оператор: <b>{{details.members[0].nameOperator}}</b> <br>
+            Старший оператор: <b>{{details.members[0].nameMainOperator}}</b>
+        </div>
+        {{/if}}
     </div>
 </div>
 {{/state}}
