@@ -11,6 +11,7 @@ var ServiceModel = Backbone.Model.extend({
     defaults:{
         id:"Service",
         title:"Название сервиса",
+        status: "plan",
         types:[
             {
                 type:"Готов",

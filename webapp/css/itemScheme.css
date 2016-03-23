@@ -188,7 +188,7 @@ body {
 }
 
 .leftTimeLineWorkPlace {
-    height: 400px;
+    height: 463px;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
     z-index: -30;
@@ -199,7 +199,7 @@ body {
     padding-top: 400px;
 }
 .rightTimeLineWorkPlace {
-    height: 400px;
+    height: 463px;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
     z-index: -30;
@@ -211,7 +211,7 @@ body {
     padding-top: 400px;
 }
 .leftTimeLineTransportation {
-    height: 282px;
+    height: 347px;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
     z-index: -30;
@@ -222,7 +222,7 @@ body {
     padding-top: 283px;
 }
 .arrowGreen>.rightTimeLineTransportation {
-    height: 265px;
+    height: 328px;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
     z-index: -30;
@@ -231,7 +231,7 @@ body {
     vertical-align: bottom;
 }
 .arrowYellow>.rightTimeLineTransportation {
-    height: 265px;
+    height: 328px;
     text-align: left;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
@@ -241,7 +241,7 @@ body {
     vertical-align: bottom;
 }
 .arrowRed>.rightTimeLineTransportation {
-    height: 265px;
+    height: 328px;
     border-left: 2px dotted #B3B3B3;
     position: absolute;
     z-index: -30;
@@ -301,4 +301,25 @@ body {
 }
 .defectRed {
     background-image: url("../img/defectRed.svg");
+}
+.timeArrowPlan {
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    margin-top: -20px;
+    background-repeat: no-repeat;
+}
+hr {
+    width: 100vw;
+    max-width: 100%;
+    margin-bottom: 0%;
+    margin-top: -3px;
+    position: fixed;
+}
+.timeArrowFact {
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    margin-top: 20px;
+    background-repeat: no-repeat;
 }
