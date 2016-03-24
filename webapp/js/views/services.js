@@ -16,6 +16,16 @@ var Services = Ractive.extend({
         var triggers = ins.get("currentDetails.process.triggers");
         tools.resize();
         ins.on({
+            saveData: function() {
+                console.log(JSON.parse(JSON.stringify(ins.get())));
+                console.log("saving...");
+                var obj = JSON.parse(JSON.stringify(ins.get("services").models));
+                $.ajax({
+                    url:"/save/states",
+                    type: "POST",
+                    data: {data: obj}
+                });
+            },
             details:function(event){
                 console.log(event);
                 var details = event.context.details;
