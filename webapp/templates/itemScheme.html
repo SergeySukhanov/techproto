@@ -3,7 +3,20 @@
 <div class="globalWrapper">
     {{#states: id}}
     {{#if type == "mainStorage"}}
-        <div class="mainStorage">
+        <div class="mainStorage
+                    {{#if status =='plan'}}
+                        storageGreen
+                    {{/if}}
+                    {{#if status =='delay'}}
+                        storageYellow
+                    {{/if}}
+                    {{#if status =='losses'}}
+                        storageRed
+                    {{/if}}
+                    {{#if status =='default'}}
+                        storageGreen
+                    {{/if}}
+        ">
             <br><br><br><br>
                 <h5>Выдача со<br>склада<br></h5>
                 <i class="fa fa-3x fa-cogs" style="color: #b3b3b3;"></i>

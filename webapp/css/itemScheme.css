@@ -324,7 +324,7 @@ hr {
     background-repeat: no-repeat;
 }
 .mainStorage {
-    background-image: url("../img/storageGreen.svg");
+    /*background-image: url("../img/storageGreen.svg");*/
     position: relative;
     background-repeat: no-repeat;
     width: 168px;
@@ -333,7 +333,8 @@ hr {
     bottom: 337px;
     display: inline-table;
     background-size: 100% 100%;
-    text-align: center;
+    text-align: left;
+    padding-left: 27px;
 }
 .resultBlock {
     width: 100px;
