@@ -306,7 +306,7 @@ body {
     width: 100%;
     position: fixed;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -200px;
     background-repeat: no-repeat;
 }
 hr {
@@ -320,6 +320,26 @@ hr {
     width: 100%;
     position: fixed;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -157px;
     background-repeat: no-repeat;
+}
+.mainStorage {
+    background-image: url("../img/storageGreen.svg");
+    position: relative;
+    background-repeat: no-repeat;
+    width: 168px;
+    height: 300px;
+    /* margin-top: -4px; */
+    bottom: 337px;
+    display: inline-table;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.resultBlock {
+    width: 100px;
+    height: 300px;
+    background: #8E2100;
+    position: relative;
+    display: inline-table;
+    bottom: 45px;
 }

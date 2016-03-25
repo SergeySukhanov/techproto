@@ -2,6 +2,13 @@
 
 <div class="globalWrapper">
     {{#states: id}}
+    {{#if type == "mainStorage"}}
+        <div class="mainStorage">
+            <br><br><br><br>
+                <h5>Выдача со<br>склада<br></h5>
+                <i class="fa fa-3x fa-cogs" style="color: #b3b3b3;"></i>
+        </div>
+    {{/if}}
     {{#if type == "operation"}}
         <div class="workPlaceItem">
 
@@ -136,8 +143,8 @@
         </div>
     {{/if}}
     {{/states}}
+    <div class="resultBlock"></div>
 </div>
-<!--<hr size="3" />-->
 <div class="timeArrowPlan"><hr size="3" /><p>плановое время</p></div>
 <br>
 

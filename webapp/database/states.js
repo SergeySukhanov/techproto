@@ -7,7 +7,7 @@ var statesData = [
         id: "State-1",
         title: "Выдача со склада",
         number: 5,
-        type: "operation",
+        type: "mainStorage",
         status: "delay",
         details: {
             addressPlace: [

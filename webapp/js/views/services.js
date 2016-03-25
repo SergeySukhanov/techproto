@@ -19,12 +19,12 @@ var Services = Ractive.extend({
             saveData: function() {
                 console.log(JSON.parse(JSON.stringify(ins.get())));
                 console.log("saving...");
-                var obj = JSON.parse(JSON.stringify(ins.get("services").models));
-                $.ajax({
-                    url:"/save/states",
-                    type: "POST",
-                    data: {data: obj}
-                });
+                //var obj = JSON.parse(JSON.stringify(ins.get("services").models));
+                //$.ajax({
+                //    url:"/save/states",
+                //    type: "POST",
+                //    data: {data: obj}
+                //});
             },
             details:function(event){
                 console.log(event);
@@ -45,8 +45,25 @@ var Services = Ractive.extend({
 
                 var types = services.models[event.node.attributes['data-id'].value].get("types");
 
+                var currentId = currentDetails.attributes.id;
+                var models = ins.get("states").models;
+                for(var i = 0; i < models.length; i++) {
+                    if (models[i].id == currentId) {
+                        ins.get("states").models[i].set({"services": services});
+                    }
+                }
+                console.log(ins.get());
+
+
                 types.forEach(function(elem, index){
                     elem.time = null;
+                });
+
+                var obj = JSON.parse(JSON.stringify(ins.get("states")));
+                $.ajax({
+                    url:"/save/states",
+                    type: "POST",
+                    data: {data: obj}
                 });
 
                 event.context.time = time;

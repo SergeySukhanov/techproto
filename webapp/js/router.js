@@ -90,7 +90,7 @@ var Router = Backbone.Router.extend({
                data: {
                    config: Config,
                    state: new StateModel(statesData[id]),
-                   services: new ServicesCollection(servicesData)
+                   tttservices: new ServicesCollection(servicesData)
                }
            });
         });

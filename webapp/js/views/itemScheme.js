@@ -16,7 +16,16 @@ var ItemScheme = Ractive.extend({
 
     },
     complete: function(){
+        var ins = this;
         console.log("itemScheme page");
-        console.log(this.get("services"));
+        //console.log(this.get("services"));
+        $.ajax({
+            url: "/states",
+            type: "GET"
+        }).then(function(d){
+            //console.log(d);
+            ins.set({"new": d});
+            console.log(ins.get("new"));
+        });
     }
 });
